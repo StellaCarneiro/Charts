@@ -15,7 +15,7 @@ setwd("/Users/stellacarneiro/Google Drive/Database")
 
 df <- read.csv("Matched.Sample.csv",header = TRUE,sep = ",")
 
-cn <- read_excel("~/Google Drive/Dissertação - Parte 5/Data from other sources/ExpYoY.xlsx")
+cn <- read_excel("~/Google Drive/DissertaÃ§Ã£o - Parte 5/Data from other sources/ExpYoY.xlsx")
 
 
 ################### BIG SECTOR #####################################
@@ -96,10 +96,12 @@ df <- rbind(df,i.new)
 
 #### SECTORS TO ENGLISH #####
 
-#Do PIB pela otica da despesa
+# GDP (Expenditures Approach)
 
 cn["Exp"] <- round(((cn$`2007`)/sum(cn$`2007`))*100,digits = 1)
 
+
+##### DONUTS CHARTS #####
 
 #' x      numeric vector for each slice
 #' group  vector identifying the group for each slice
